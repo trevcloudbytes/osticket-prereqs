@@ -22,34 +22,86 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- Repository and VM Creation
+- osTicket File Installation
+- Install / Enable IIS 
+- PHP Registration and Configuration
+- MySQL Configuration 
 
 <h2>Installation Steps</h2>
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Repository and VM Creation <br />
+  
+<img src="https://i.imgur.com/5Km8Lld.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+  <br /> <br />
+  <img src="https://i.imgur.com/eLbrFBw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Create an Azure Virtual Machine Windows 10, 4 vCPUs 
+  
+ - Name: WindowVM
+ - Username: labuser
+ - Password: osTicketPassword1!
+
+Log into the VM with Remote Desktop
+<p>
+  <br />
+</p>
+
+osTicket File Installation:
+
+Within the VM (WindowVM), download the osTicket-Installation-Files.zip and unzip it onto your desktop. The folder should be called “osTicket-Installation-Files”
+
+- We will use the files in this folder to install osTicket and some of the dependencies.
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+Install / Enable IIS in Windows WITH CGI
+
+World Wide Web Services -> Application Development Features -> [X] CGI
+  
+<img src="https://i.imgur.com/obPFPTw.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+Dependency Files:
+
+From the “osTicket-Installation-Files” folder, install PHP Manager for IIS (PHPManagerForIIS_V1.5.0.msi)
+  
+<img src="https://i.imgur.com/1SGtzXR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br /> 
+
+From the “osTicket-Installation-Files” folder install the Rewrite Module (rewrite_amd64_en-US.msi)
+
+<img src="https://i.imgur.com/DtAJJp9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+<br />
+
+Create the directory C:\PHP
+
+- File Explorer -> 'C' Drive -> New Folder
+
+From the “osTicket-Installation-Files” folder, unzip PHP 7.3.8 (php-7.3.8-nts-Win32-VC15-x86.zip) into the “C:\PHP” folder
+
+<br />
+
+From the “osTicket-Installation-Files” folder, install VC_redist.x86.exe.
+
+<img src="" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+
+
 </p>
 <br />
